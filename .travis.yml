@@ -4,4 +4,4 @@ services :
 before-install:
     - docker build -t vivek/docker-react -f Dockerfile.dev .
 script:
-    - docker run vivek/docker-react npm run test -- --coverage
+    - docker run -e CI=true vivek/docker-react npm run test
