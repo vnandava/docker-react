@@ -2,6 +2,6 @@ sudo: required
 services : 
     - docker
 before-install:
-    - docker build -f vivek/docker-react -f Dockerfile.dev .
+    - docker build -t vivek/docker-react -f Dockerfile.dev .
 script:
     - docker run vivek/docker-react npm run test -- --coverage
